@@ -1,0 +1,39 @@
+
+<table class="table table-striped w-auto">
+
+    <!--Table head-->
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Pair one</th>
+            <th>Pair two</th>
+            <th>Tornament</th>
+            <th>Beggining time</th>
+            <th>Count changes</th>
+            <th>Coefficients</th>
+        </tr>
+    </thead>
+  
+    <tbody>
+        <tr class="table-info" *ngFor="let item of odds">
+       
+              <!-- <div *ngFor="let item3 of item.coefficientsTennis"> -->
+            <th scope="row">{{item.sport}}</th>
+            <td>{{item.pairOne}}</td>
+            <td>{{item.pairTwo}}</td>
+            <td>{{item.tournament}}</td>
+            <td>{{item.beginingTime}}</td>              
+            <td>{{item.coefficientsTennis.length}}</td>    
+            <app-dropping-td [cTennis]="item.coefficientsTennis" [cFootball]="item.coefficientsFootballs"></app-dropping-td>
+        
+        </tr>
+        
+       
+    </tbody>
+    <!--Table body-->
+
+
+</table>
+
+
+<!-- <app-dropping-row></app-dropping-row> -->
