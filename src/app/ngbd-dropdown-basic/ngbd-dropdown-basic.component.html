@@ -1,0 +1,30 @@
+
+<div>&nbsp;</div>
+            <div class="form-row align-items-center">
+                
+              <div class="col-auto my-5">
+                  <label class="mr-sm-5" for="inlineFormCustomSelect">Changes for last:</label>
+                  <select class="custom-select mr-sm-5" id="inlineFormCustomSelect" (change)="allDroppingOddsByHours($event)">
+                    <option  value="60">one hour</option>
+                    <option value="360">6 hours</option>
+                    <option value="720">12 hours</option>
+                    <option selected value="1440">24 hours</option>
+                    <option value="2880">48 hours</option>
+                    
+                  </select>
+                </div>
+                <div class="col-auto my-5">
+                    <label class="mr-sm-5" for="inlineFormCustomSelect">Will begin for:</label>
+                    <select class="custom-select mr-sm-5" id="inlineFormCustomSelect" (change)="droppingOddsByNextHours($event)">
+                      <option  value="360">6 hours</option>
+                      <option value="720">12 hours</option>
+                      <option value="1440">24 hours</option>
+                      <option selected value="2880">48 hours</option>
+                      
+                    </select>
+                  </div>
+          
+                  
+            </div>
+
+      

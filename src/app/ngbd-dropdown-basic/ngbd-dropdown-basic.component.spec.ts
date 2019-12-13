@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DroppingRowComponent } from './dropping-row.component';
+import { NgbdDropdownBasicComponent } from './ngbd-dropdown-basic.component';
 
-describe('DroppingRowComponent', () => {
-  let component: DroppingRowComponent;
-  let fixture: ComponentFixture<DroppingRowComponent>;
+describe('NgbdDropdownBasicComponent', () => {
+  let component: NgbdDropdownBasicComponent;
+  let fixture: ComponentFixture<NgbdDropdownBasicComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DroppingRowComponent ]
+      declarations: [ NgbdDropdownBasicComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DroppingRowComponent);
+    fixture = TestBed.createComponent(NgbdDropdownBasicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

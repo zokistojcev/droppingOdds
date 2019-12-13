@@ -1,0 +1,148 @@
+
+/* .coefficient{
+    display: inline-flex;
+} */
+/* .odds-droppingDrop {
+  background-color: red;
+  background-image: url(gifs/arrow-145782_1280.png);
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  background-size: 60% 60%;
+  height: 45px; 
+  width:50%; 
+}
+.odds-droppingUp {
+  background-color: red;
+  background-image: url(gifs/Arrow-Up-Blink-1.gif);
+  background-position: 90% 90%;
+  background-repeat: no-repeat;
+  background-size: 80% 60%;
+  height: 70px; 
+  width:50%;    
+} */
+.card-title{
+  background-color: #808080
+}
+
+.typeOfGame{
+  text-align: center;
+  grid-area: a;
+}
+
+.tipOne{     
+  background-color: #6c757d; 
+  color:white;
+  text-align: center;
+  grid-area: b;
+}
+
+.tipDraw{
+  background-color: #6c757d; 
+  color:white;
+  text-align: center;
+  grid-area: q;
+}
+
+.tipTwo{
+  background-color: #6c757d; 
+  color:white;
+  text-align: center;
+  grid-area: w;
+}
+          
+.dateAndTime{
+
+grid-area: c;
+}
+
+.pairOne{
+grid-area: d;
+text-align: right; 
+}
+.pairTwo{
+text-align: left;
+grid-area: i; 
+}
+
+.coefficientHost{
+border: 1px solid black;
+cursor: pointer;
+grid-area: f;   
+
+}
+
+.coefficientDraw{
+border: 1px solid black;
+cursor: pointer;
+grid-area: g;   
+
+} 
+
+.coefficientVisitor{
+border: 1px solid black;
+cursor: pointer;
+
+grid-area: h;
+}
+
+.h{
+  background-color: #6c757d; 
+  color:white;
+  grid-area: j; 
+}
+
+.blink-increase{
+  color:black;
+  border: 1px solid black;  
+  
+  animation: blinkingBackgroundUp 1s infinite;   
+}
+
+.blink-drop{
+  color:black;
+  border: 1px solid black;
+ 
+  animation: blinkingBackgroundDrop 1s infinite;
+}
+@keyframes blinkingBackgroundUp{
+  50%		{ background-color: #32CD32;}
+  100%	{ background-color: white;}
+}
+@keyframes blinkingBackgroundDrop{
+  50%	{ background-color: #ef0a1a}
+  100%	{ background-color: white;}
+}
+       
+
+ 
+ 
+.footer{
+  text-align: center;
+}
+
+.sport{
+  background-color: #6c757d; 
+  color:white;
+}
+.xc{
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(17, 1fr);
+  grid-template-rows: 25px 25px 60px ;
+  grid-template-areas: 
+    "a a a a a a a a a a a a a a a a a"
+    ". . . . . . . b q w . . . . . . ."
+    "c d d d d d d f g h i i i i i i j";
+}
+.xa{
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 25px 25px 60px ;
+  grid-template-areas: 
+    "a a a a a a a a a a a a a a a a "
+    ". . . . . . . b w . . . . . . ."
+    "c d d d d d d f h i i i i i i j";
+}
+
+      

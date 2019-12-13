@@ -1,41 +1,22 @@
-<!-- <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2" >
-          <a [routerLink]="['/navbar']">Nvabr zoki</a>
-          <ul class="nav nav-tabs">
-            <li *ngFor = "let spor of navbarSports"><a [routerLink]="['/sportsnavbar', spor]">{{spor}}</a></li>
-          </ul>
-      </div>
-    </div>
-</div> -->
+<ul class="nav nav-tabs">
+    <a class="nav-link" 
+    [routerLink]="['/sportsnavbar', 'All']"
+    routerLinkActive="active selected-item"
+    >All</a>
+  <li class="nav-item"  *ngFor = "let spor of navbarSports">
+      
+      <a class="nav-link"
+        [routerLink]="['/sportsnavbar', spor]"
+        routerLinkActive="active selected-item"
+    >{{spor}}</a>  
+  </li>
+</ul>
+
+
+
  
 
-  <!-- <div>
-      <ul class="nav nav-tabs">
-      <li role="presentation" *ngFor = "let spor of navbarSports">
-      <a routerLink="['/sportsnavbar', spor]">{{spor}}</a>
-      </li>
-    </ul>
-  </div> -->
-  
-  <ngb-tabset [justify]="currentJustify" >
-    
-      <div *ngFor = "let spor of navbarSports">
-
-    <ngb-tab>
-      <ng-template ngbTabTitle>
-       <a [routerLink]="['/sportsnavbar', spor]">{{spor}}</a>    
-      </ng-template>
-    </ngb-tab>
-
-  </div>
  
-  </ngb-tabset>
-
-
-  <app-dropping-row 
-  [odds]="oddsSports">
-  </app-dropping-row>
 
 
 

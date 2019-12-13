@@ -1,0 +1,55 @@
+<div >
+<div >
+<table class="table table-bordered" >
+
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Pair one</th>
+      <th scope="col">Coefficient host</th>
+      <th scope="col">Coefficient draw</th>
+      <th scope="col">Coefficient visitor</th>
+      <th scope="col">Pair two</th>
+      <th scope="col">Total changes</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let item of tourPairs; index as i">
+    <tr>
+      <td scope="row">{{i+1}}</td>
+      <td>{{item.pairOne}}</td>
+      <td>{{item.coefficientsFootballs[0].coefficientHost}}</td>
+      <td>{{item.coefficientsFootballs[0].coefficientDraw}}</td>
+      <td>{{item.coefficientsFootballs[0].coefficientVisitor}}</td>
+      <td>{{item.pairTwo}}</td>
+      <td>{{item.coefficientsFootballs.length}}</td>
+    </tr>
+  </tbody>
+
+  <!-- <div>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Pair one</th>
+        <th scope="col">Coefficient host</th>
+        <th scope="col">Coefficient visitor</th>
+        <th scope="col">Pair two</th>
+        <th scope="col">Total changes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{i}}</th>
+        <td>{{item.pairOne}}</td>
+        <td>{{item.coefficientsTennis[0].coefficientFirst}}</td>
+        <td>{{item.coefficientsTennis[0].coefficientSecond}}</td>
+        <td>{{item.pairTwo}}</td>
+        <td>{{item.coefficientsTennis.length}}</td>
+      </tr>
+    </tbody>
+    
+  </div> -->
+
+</table>
+</div>
+</div>

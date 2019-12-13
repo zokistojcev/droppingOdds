@@ -1,42 +1,26 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 import { OddsApiService } from '../services/odds-api.service';
-import { Odd } from '../models/odd.model';
-import { TestServiceService } from '../test-service.service';
-import { SportsNAvbar } from '../models/sportsNavbar';
-import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sports-navbar',
   templateUrl: './sports-navbar.component.html',
   styleUrls: ['./sports-navbar.component.css']
 })
-export class SportsNavbarComponent implements OnInit, OnDestroy {
-  oddsSports: Odd[];
+export class SportsNavbarComponent implements OnInit {
   navbarSports: string[];
-  zoki: Subscription; 
   currentJustify = 'center';
   constructor( 
-    private route: ActivatedRoute, 
-    private oddsApiService: OddsApiService,
-    private testServiceService: TestServiceService ){ };
+
+    private oddsApiService: OddsApiService
+    ){ };
 
   ngOnInit() {
     this.getSportNavbar();
-    this.zoki = this.route.params.subscribe(p=>this.getSportUrl(p["sport"]));
+
   }
 
-  ngOnDestroy(){
-    this.zoki.unsubscribe();
-  }
-
-  getSportUrl(sport: string){
-    
-    
-    this.oddsApiService.getBySport(sport).subscribe(d=> this.oddsSports = d);
-  };
-
-  getSportNavbar(){
-    this.testServiceService.getTest().subscribe(d=> this.navbarSports = d);
+  private getSportNavbar(){
+    this.oddsApiService.getSports().subscribe(d=> this.navbarSports = d);
   }
 }

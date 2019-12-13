@@ -1,0 +1,14 @@
+
+    <div> 
+        <button (click)="getTournamentsBySport(tournamentSport)" type="button" class="btn btn-light" >{{tournamentSport}}</button> 
+        <div class="list-group" *ngFor = "let tour of allTournaments" style="list-style-type:none">
+            <a [routerLink]="['/tour/',tour ]" routerLinkActive="active selected-item" class="list-group-item">{{tour}}</a>        
+        </div>
+      </div>
+
+
+
+
+
+
+

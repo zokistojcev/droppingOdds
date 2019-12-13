@@ -1,0 +1,18 @@
+
+<div *ngIf="cFootball!==null">
+        <div *ngFor="let item of cFootball" class="hoverCoefficients col-sm">   
+        <span>{{item.dateAndTime | date:'MMM d HH:mm'}}</span>
+        <b> {{item.coefficientHost| number}}</b>
+        <b> {{item.coefficientDraw| number}}</b>
+        <b> {{item.coefficientVisitor| number}}</b>   
+       
+        </div>
+</div>
+
+<div *ngIf="cTennis!==null">
+        <div *ngFor="let item of cTennis" class="hoverCoefficients col-sm">   
+                <span>{{item.dateAndTime | date:'MMM d HH:mm'}}</span>   
+                <b> {{item.coefficientFirst| number}}</b>
+                <b> {{item.coefficientSecond| number}}</b>
+        </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="card text-center" *ngFor="let item of droppingOdds">
+  
+    <div class="sport badge badge-secondary"><H6 align="left">{{item.sport}}</H6></div>
+    <div ><H5 align="left">{{item.tournament}}</H5></div>
+    <div class="card-header"
+    [ngClass]="{
+      'xa': item.coefficientDrawFirst===0.00,
+      'xc': item.coefficientDrawFirst!==0.00}">
+      
+          <div class="typeOfGame">Final Time</div>
+                  
+          <div class="tipOne">1</div>
+          <div 
+          *ngIf="item.coefficientDrawFirst!==0.00"
+          class="tipDraw">
+            X
+          </div>
+          <div class="tipTwo">2</div>
+        
+          <div class="dateAndTime badge badge-secondary">
+            <h5>
+                <span>{{item.beginningTime | date:'d MMM'}}</span><br>
+                <span>{{item.beginningTime | date:'HH:mm'}}</span>
+            </h5>
+          </div>
+          <div class="pairOne badge badge-light">
+            <span>
+              <h6>
+                <b>{{ item.pairOne }}</b>
+              </h6>
+            </span>
+          </div>
+        
+          <div
+            class="coefficientHost"
+            style="cursor: pointer;"
+            [ngClass]="{
+            'blink-increase': item.biggestAverage.item1==='Host' && item.biggestAverage.item3==='Up',
+            'blink-drop': item.biggestAverage.item1==='Host' && item.biggestAverage.item3==='Drop'}">
+            <div appAllOdds [avram]=item.oddId>
+              {{item.coefficientHostFirst | number:'1.2'}}<br>{{item.coefficientHostLast | number:'1.2'}}
+            </div>
+          </div>
+          
+              <div
+              *ngIf="item.coefficientDrawFirst!==0.00" 
+                class="coefficientDraw" 
+                
+                [ngClass]="{
+                'blink-increase': item.biggestAverage.item1==='Draw' && item.biggestAverage.item3==='Up',
+                'blink-drop': item.biggestAverage.item1==='Draw' && item.biggestAverage.item3==='Drop'}">
+                <div appAllOdds [avram]=item.oddId>
+                  {{item.coefficientDrawFirst | number:'1.2'}}<br>{{item.coefficientDrawLast | number:'1.2'}}
+                </div>
+              </div>
+          
+
+          <div 
+            class="coefficientVisitor" 
+            [ngClass]="{
+            'blink-increase': item.biggestAverage.item1==='Visitor' && item.biggestAverage.item3==='Up',
+            'blink-drop': item.biggestAverage.item1==='Visitor' && item.biggestAverage.item3==='Drop'}">
+            <div appAllOdds [avram]=item.oddId>
+              {{item.coefficientVisitorFirst | number:'1.2'}}<br>{{item.coefficientVisitorLast | number:'1.2' }}
+            </div>         
+          </div>
+        
+          <div class="pairTwo badge badge-light">
+              <span>
+                <h6> 
+                    <b>{{ item.pairTwo }}</b>
+                </h6>
+              </span>
+          </div>
+
+          <div class="h">
+            % of change:
+          </div>
+      </div>
+      <div class="card-footer text-muted tournamentLastChange footer">
+          last change:  
+          <span timeago [date]="item.coefficientLastDate" ></span>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+    
+
